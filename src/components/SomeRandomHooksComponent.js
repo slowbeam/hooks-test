@@ -1,8 +1,12 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 const SomeRandomHooksComponent = () => {
 
   const [favoriteAnimal, setFavoriteAnimal] = useState('cat');
+
+  useEffect(() => {
+    document.title = `favorite animal: ${favoriteAnimal}`
+  })
 
   return (
     <div className="random-component">
@@ -10,7 +14,7 @@ const SomeRandomHooksComponent = () => {
       <br/>
       <button onClick={
         favoriteAnimal === 'cat' ?
-        () => setFavoriteAnimal('dog') : () => {setFavoriteAnimal('cat')}
+        () => setFavoriteAnimal('dog') : () => setFavoriteAnimal('cat')
       }>
       Nope, I changed my mind.
       </button>
