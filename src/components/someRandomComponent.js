@@ -22,7 +22,7 @@ class SomeRandomComponent extends React.Component {
       <div className="random-component">
         <h1>My favorite animal is a {this.state.favoriteAnimal}!</h1>
         <br/>
-        <button onClick={this.handleClick}>hmm...that's not right</button>
+        <button onClick={this.handleClick}>Nope, I changed my mind.</button>
       </div>
     )
   }

@@ -1,31 +1,21 @@
-import React from 'react';
+import React, { useState } from 'react';
 
-class SomeRandomHooksComponent extends React.Component {
+const SomeRandomHooksComponent = () => {
 
-  state = {
-    favoriteAnimal: 'cat'
-  }
+  const [favoriteAnimal, setFavoriteAnimal] = useState('cat');
 
-  handleClick = () => {
-    switch(this.state.favoriteAnimal) {
-      case 'cat':
-        this.setState({ favoriteAnimal: 'dog'});
-        break;
-      case 'dog':
-        this.setState({ favoriteAnimal: 'cat'});
-        break;
-    }
-  }
-
-  render() {
-    return(
-      <div className="random-component">
-        <h1>My favorite animal is a {this.state.favoriteAnimal}!</h1>
-        <br/>
-        <button onClick={this.handleClick}>hmm...that's not right</button>
-      </div>
-    )
-  }
+  return (
+    <div className="random-component">
+      <h1>My favorite animal is a {favoriteAnimal}!</h1>
+      <br/>
+      <button onClick={
+        favoriteAnimal === 'cat' ?
+        () => setFavoriteAnimal('dog') : () => {setFavoriteAnimal('cat')}
+      }>
+      Nope, I changed my mind.
+      </button>
+    </div>
+  )
 };
 
 export default SomeRandomHooksComponent;

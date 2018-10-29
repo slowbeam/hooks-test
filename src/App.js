@@ -2,12 +2,13 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import SomeRandomComponent from './components/SomeRandomComponent';
+import SomeRandomHooksComponent from './components/SomeRandomHooksComponent';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <SomeRandomComponent />
+        <SomeRandomHooksComponent />
       </div>
     );
   }
