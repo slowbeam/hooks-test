@@ -1,6 +1,6 @@
 import React from 'react';
 
-class SomeRandomComponent extends React.Component {
+class SomeRandomHooksComponent extends React.Component {
 
   state = {
     favoriteAnimal: 'cat'
@@ -28,4 +28,4 @@ class SomeRandomComponent extends React.Component {
   }
 };
 
-export default SomeRandomComponent;
+export default SomeRandomHooksComponent;
